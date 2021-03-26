@@ -1,49 +1,66 @@
+@import "src/Assets/main";
+
 .login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &__container {
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    padding: 15px 15px;
+  }
+
+  &__col {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-
-
-    &__container {
-        border: 1px solid black;
-        border-radius: .25rem;
-        padding: 15px 15px;
-    }
-
-    &__hero {
-        display: flex;
+    form {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      button {
         justify-content: center;
-
-        &:hover {
-            animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
-            transform: translate3d(0, 0, 0);
-            backface-visibility: hidden;
-            perspective: 1000px;
-        }
+      }
     }
+  }
 
+  &__hero {
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+  }
+}
+
+form {
+  small.form-text.text-muted {
+    color: $color-green-main !important;
+  }
 }
 
 @keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, -1px, -1px);
+  }
 
-    10%,
-    90% {
-        transform: translate3d(-1px, -1px, -1px);
-    }
+  20%,
+  80% {
+    transform: translate3d(2px, 2px, 2px);
+  }
 
-    20%,
-    80% {
-        transform: translate3d(2px, 2px, 2px);
-    }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, -4px, -4px);
+  }
 
-    30%,
-    50%,
-    70% {
-        transform: translate3d(-4px, -4px, -4px);
-    }
-
-    40%,
-    60% {
-        transform: translate3d(4px, 4px, 4px);
-    }
+  40%,
+  60% {
+    transform: translate3d(4px, 4px, 4px);
+  }
 }

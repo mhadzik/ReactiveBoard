@@ -1,6 +1,6 @@
 import React from 'react';
-import './Login.scss'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
+import './Login.scss'
 import { Browser } from 'react-kawaii';
 
 
@@ -12,16 +12,16 @@ const Login = () => {
     return (
         <Container className="login">
             <Container className="login__hero">
-                <Browser mood="blissful" color="#61DDBC" />
+                <Browser mood="blissful" color="#00CFB3" />
             </Container>
             <Container className="login__container">
                 <Row className="text-center" >
                     <Col>
-                        <h2>Log in to your ReactiveBoard!</h2>
+                        <h1>Log in to your ReactiveBoard!</h1>
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={12} md={{ span: 6, offset: 3 }}>
+                    <Col xs={12} md={12}  className="login__col">
                         <Form>
                             <Form.Group controlId="formBasicEmail">
                                 <Form.Label>Email address</Form.Label>
@@ -30,7 +30,6 @@ const Login = () => {
                                     We'll never share your email with anyone else.
                             </Form.Text>
                             </Form.Group>
-
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control type="password" placeholder="Password" />

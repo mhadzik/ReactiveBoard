@@ -1,0 +1,11 @@
+button.btn-green {
+  background-color: #00cfb3;
+  color: white;
+}
+
+.form-check-label:before {
+  background-color: red;
+}
+.form-check .form-check-input:checked ~ .form-check-label::before {
+  background-color: black;
+}

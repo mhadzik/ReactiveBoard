@@ -1,4 +1,26 @@
-.btn-green {
-    background-color: #61DDBC !important;
-    color: white !important;
+body {
+  font-family: $font-family;
+  font-weight: $font-weight-general;
+  font-size: $font-size-general;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1 {
+    font-size: $font-size-h1;
+    font-weight: $font-weight-bold;
+    margin-bottom: 1em;
+  }
+  h2 {
+    font-size: $font-size-h2;
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: $font-size-h3;
+    margin-bottom: 1em;
+  }
+}
+
+body > div {
+  font-family: "Montserrat", sans-serif;
 }
