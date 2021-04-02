@@ -3,14 +3,29 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.scss';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 //Components
 import Login from './Login/Login'
+import UserPage from './UserPage/UserPage'
 
 ReactDOM.render(
   <React.StrictMode>
     <div className="root">
-      <Login />
+      <Router>
+        <Switch>
+            <Route path="/user">
+              <UserPage />
+            </Route>
+            <Route path="/">
+              <Login />
+            </Route>
+        </Switch>
+      </Router>
     </div>
   </React.StrictMode>,
   document.getElementById('root')

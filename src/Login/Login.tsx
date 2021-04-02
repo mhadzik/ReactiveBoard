@@ -12,7 +12,7 @@ const Login = () => {
     return (
         <Container className="login">
             <Container className="login__hero">
-                <Browser mood="blissful" color="#00CFB3" />
+                <Browser mood="blissful" color="#78b159" />
             </Container>
             <Container className="login__container">
                 <Row className="text-center" >

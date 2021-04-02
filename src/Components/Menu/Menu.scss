@@ -1,0 +1,55 @@
+@import "src/Assets/main";
+
+.Menu {
+  padding: 1em;
+
+  .col-3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    .switch {
+      margin-bottom: 0.5em;
+      margin-right: 0.5em;
+    }
+
+    svg {
+      &:hover {
+        animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+      }
+    }
+    a {
+      color: $color-green-main;
+    }
+  }
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, -1px, -1px);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 2px, 2px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, -4px, -4px);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 4px, 4px);
+  }
+}
